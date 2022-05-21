@@ -37,11 +37,35 @@ https://www.youtube.com/watch?v=v0ssX-JiV-s
 		- tp 
 		- t0 - t6 temporary registers
 		- a0 - a7 function arguments
+	- Why #registers are limited?
+	  Because the number of bits available to encode is limited. 
+
+# Execution 
+	- Each clock cycle the most basic operation is performned
+	- Each instruction in a program takes typically 4-clocks - the concept of pipelining.  Fetch - Decode - Execution - Writeback 
 
 # Instructions
 	- ADD rd, s1, s2
   s1, s2, rd are operands
 	- 7 bits opcodes. 
 
+	- Immediate type 
+	  -> when you code the data inside of the instruction itself. 
+	- Load and Store type
+    -> LW / SW 
+		SW x1, 4(x0) -> stores [x0+4] into x1. 
+
+# RISC vs CISC
+	- RISC = 1 instruction 1 micro operation
+	- CISC = 1 instruction multiple micro operations. 
+  Even it's micro, it doesn't mean the instruction is small.
+
+# Superscalar Microprocessor on CISCS
+	- Multiple Decoder multiple instructions in parallel
+	- Checking instructions coming after each other - hazard 
+
+# Superscalar vs Multi-core 
+  - Multi-core, from programmer perspective you see multiple thread.
+	- Superscalar, from programmer perspective, you see ONE thread. 
 
 
